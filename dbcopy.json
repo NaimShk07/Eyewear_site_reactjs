@@ -1,0 +1,192 @@
+{
+   "user": [
+     {
+       "id": 1,
+       "name": "John Doe",
+       "email": "john@example.com",
+       "password": "password123"
+     },
+     {
+       "id": 2,
+       "name": "Jane Smith",
+       "email": "jane@example.com",
+       "password": "pass456"
+     },
+     {
+       "id": 3,
+       "name": "Michael Johnson",
+       "email": "michael@example.com",
+       "password": "mike789"
+     },
+     {
+       "id": 4,
+       "name": "Emily Brown",
+       "email": "emily@example.com",
+       "password": "securepass"
+     },
+     {
+       "id": 5,
+       "name": "William Davis",
+       "email": "william@example.com",
+       "password": "will1234"
+     },
+     {
+       "name": "kljsdf",
+       "email": "sdfadf",
+       "password": "asdfasadfasasd",
+       "id": 7
+     },
+     {
+       "name": "Working",
+       "email": "working@gmail.com",
+       "password": "working",
+       "id": 8
+     },
+     {
+       "name": "neyo",
+       "email": "neyo@gmail.com",
+       "password": "neyoneyo",
+       "id": 9
+     },
+     {
+       "name": "abcd",
+       "email": "abcd@gmail.com",
+       "password": "abcd",
+       "id": 10
+     },
+     {
+       "name": "last",
+       "email": "last@gmail.com",
+       "password": "last",
+       "id": "1692356520984"
+     }
+   ],
+   "admin": [
+     {
+       "id": 1,
+       "email": "naim@gmail.com",
+       "password": "1234"
+     }
+   ],
+   "contact": [
+     {
+       "id": 1,
+       "name": "John Doe",
+       "email": "john@example.com",
+       "message": "I have a question about your products."
+     },
+     {
+       "id": 2,
+       "name": "Jane Smith",
+       "email": "jane@example.com",
+       "message": "Hello, I'd like to inquire about your services."
+     },
+     {
+       "id": 3,
+       "name": "Michael Johnson",
+       "email": "michael@example.com",
+       "message": "I need assistance with a recent order."
+     },
+     {
+       "id": 4,
+       "name": "Emily Brown",
+       "email": "emily@example.com",
+       "message": "Can you provide more information about your pricing?"
+     },
+     {
+       "id": 5,
+       "name": "William Davis",
+       "email": "william@example.com",
+       "message": "I'm interested in your upcoming events."
+     },
+     {
+       "name": "naim",
+       "email": "nayemuddinshaikh@gmail.com",
+       "message": "you are doing great keep going on",
+       "id": 6
+     }
+   ],
+   "blog": [
+     {
+       "id": 1,
+       "title": "Choosing the Perfect Frames: A Guide to Eyewear Selection",
+       "description": "Discover how to pick the right frames that complement your style and enhance your look.",
+       "thumbnail_link": "https://example.com/eyewear-selection-thumbnail.jpg"
+     },
+     {
+       "id": 2,
+       "title": "Trendy Eyewear Styles for the Modern Fashionista",
+       "description": "Explore the latest eyewear trends that are perfect for keeping up with the fashion world.",
+       "thumbnail_link": "https://example.com/eyewear-trends-thumbnail.jpg"
+     },
+     {
+       "id": 3,
+       "title": "Caring for Your Eyeglasses: Maintenance Tips and Tricks",
+       "description": "Learn how to properly care for and maintain your eyeglasses to keep them in top condition.",
+       "thumbnail_link": "https://example.com/eyeglasses-care-thumbnail.jpg"
+     },
+     {
+       "id": 4,
+       "title": "Prescription vs. Non-Prescription Sunglasses: Which is Right for You?",
+       "description": "Find out the differences between prescription and non-prescription sunglasses and choose what suits you best.",
+       "thumbnail_link": "https://example.com/sunglasses-prescription-thumbnail.jpg"
+     },
+     {
+       "id": 5,
+       "title": "Eyewear Trends Through the Decades: A Nostalgic Journey",
+       "description": "Take a trip through time and explore how eyewear styles have evolved over the decades.",
+       "thumbnail_link": "https://example.com/eyewear-decades-thumbnail.jpg"
+     }
+   ],
+   "product": [
+     {
+       "id": 1,
+       "name": "Blue Transparent",
+       "des": "This is a stylish pair of eyeglasses with a blue transparent frame.",
+       "prod_cat": "Men Eyewear",
+       "price": "Rs999",
+       "img_link": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e11729-c3-eyeglasses_g_3401.jpg"
+     },
+     {
+       "id": 2,
+       "name": "Classic Black",
+       "des": "A timeless black frame that suits any occasion.",
+       "prod_cat": "Women Eyewear",
+       "price": "Rs799",
+       "img_link": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e11729-c3-eyeglasses_g_3401.jpg"
+     },
+     {
+       "id": 3,
+       "name": "Retro Round",
+       "des": "Get a vintage look with these stylish round eyeglasses.",
+       "prod_cat": "Men Eyewear",
+       "price": "Rs1200",
+       "img_link": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e11729-c3-eyeglasses_g_3401.jpg"
+     },
+     {
+       "id": 4,
+       "name": "Bold Tortoise",
+       "des": "Make a statement with these bold tortoise-patterned frames.",
+       "prod_cat": "Women Eyewear",
+       "price": "Rs899",
+       "img_link": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e11729-c3-eyeglasses_g_3401.jpg"
+     }
+   ],
+   "categories": [
+     {
+       "id": 1,
+       "name": "Men eyewear",
+       "action": "delete edit"
+     },
+     {
+       "id": 2,
+       "name": "Womes eyewear",
+       "action": "delete edit"
+     },
+     {
+       "id": 3,
+       "name": "Kid eyewear",
+       "action": "delete edit"
+     }
+   ]
+ }
