@@ -1,5 +1,5 @@
 // import { Logout } from '@mui/icons-material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -10,6 +10,15 @@ import { toast } from 'react-toastify';
 function Headerrr() {
    const redirect = useNavigate();
 
+   useEffect(() => {
+      fetchData();
+   }, []);
+   const fetchData = () => {
+
+   };
+
+
+
 
    const logout = () => {
       localStorage.removeItem('user');
@@ -18,7 +27,7 @@ function Headerrr() {
       return redirect('/');
    };
    return (
-      <div>
+      <div >
          <header className="header-area header-sticky">
             <div className="container">
                <div className="row">
@@ -46,26 +55,44 @@ function Headerrr() {
                               </ul>
                            </li>
 
-                           {
-                              localStorage.getItem('user') ? <li className="submenu " >
-                                 <a href="javascript:;">
-                                    {localStorage.getItem('user')} <i class="fa fa-user" style={{ fontSize: "20px" }}></i></a>
-                                 <ul style={{ left: "15px" }} >
-                                    <li style={{ cursor: "pointer" }} ><NavLink to="/profile">Profile</NavLink></li>
-                                    <li style={{ cursor: "pointer" }} onClick={logout}><NavLink>Log out</NavLink></li>
+
+                           {(() => {
+                              if (localStorage.getItem('user')) {
+                                 return (
+                                    <li className="submenu " >
+                                       <a href="javascript:;">
+                                          {localStorage.getItem('user')} <i class="fa fa-user" style={{ fontSize: "20px" }}></i></a>
+                                       <ul style={{ left: "15px" }} >
+                                          <li style={{ cursor: "pointer" }} ><NavLink to="/profile">Profile</NavLink></li>
+                                          <li style={{ cursor: "pointer" }} onClick={logout}><NavLink>Log out</NavLink></li>
 
 
-                                 </ul>
-                              </li> : <li className="submenu " >
-                                 <a href="javascript:;"><i class="fa fa-user" style={{ fontSize: "20px" }}></i></a>
-                                 <ul style={{ left: "-5px" }}>
-                                    <li className=" "><NavLink to="/login">Login </NavLink></li>
-                                    <li className=" "><NavLink to="/signup">Sign up </NavLink></li>
+                                       </ul>
+                                    </li>
+
+                                 );
+
+                              } else {
+                                 return (
+                                    <li className="submenu " >
+                                       <a href="javascript:;"><i class="fa fa-user" style={{ fontSize: "20px" }}></i></a>
+                                       <ul style={{ right: 0 }}>
+                                          <li className=" "><NavLink to="/login">Login </NavLink></li>
+                                          <li className=" "><NavLink to="/signup">Sign up </NavLink></li>
 
 
-                                 </ul>
-                              </li>
-                           }
+                                       </ul>
+                                    </li>
+
+                                 );
+
+
+
+
+
+                              }
+
+                           })()}
 
 
                         </ul>
@@ -77,11 +104,11 @@ function Headerrr() {
                   </div>
                </div>
             </div>
-         </header>
+         </header >
 
 
 
-      </div>
+      </div >
    );
 }
 

@@ -109,7 +109,7 @@ function Signup() {
                                     <div className="form-check d-flex justify-content-center mb-5">
                                        {/* <input className="form-check-input me-2" type="checkbox" defaultValue id="form2Example3c" /> */}
                                        <label className="form-check-label" htmlFor="form2Example3">
-                                          Already have an account? <NavLink to="/">Log in</NavLink>
+                                          Already have an account? <NavLink to="/login">Log in</NavLink>
                                        </label>
                                     </div>
                                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

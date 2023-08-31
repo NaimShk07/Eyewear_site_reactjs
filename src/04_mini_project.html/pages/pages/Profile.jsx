@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 
 function Profile() {
 
+   
+
    // for data showing in website
    useEffect(() => {
       fetchData();
@@ -15,6 +17,7 @@ function Profile() {
       const id = localStorage.getItem('userid');
       const res = await axios.get(`http://localhost:3000/user/${id}`);
       setData(res.data);
+      // ############################################
       localStorage.setItem('userid',res.data.id)
       localStorage.setItem('user',res.data.name)
 
