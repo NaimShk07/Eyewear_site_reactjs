@@ -10,15 +10,6 @@ import { toast } from 'react-toastify';
 function Headerrr() {
    const redirect = useNavigate();
 
-   useEffect(() => {
-      fetchData();
-   }, []);
-   const fetchData = () => {
-
-   };
-
-
-
 
    const logout = () => {
       localStorage.removeItem('user');
@@ -61,7 +52,7 @@ function Headerrr() {
                                  return (
                                     <li className="submenu " >
                                        <a href="javascript:;">
-                                          {localStorage.getItem('user')} <i class="fa fa-user" style={{ fontSize: "20px" }}></i></a>
+                                          {localStorage.getItem("user")} <i class="fa fa-user" style={{ fontSize: "20px" }}></i></a>
                                        <ul style={{ left: "15px" }} >
                                           <li style={{ cursor: "pointer" }} ><NavLink to="/profile">Profile</NavLink></li>
                                           <li style={{ cursor: "pointer" }} onClick={logout}><NavLink>Log out</NavLink></li>

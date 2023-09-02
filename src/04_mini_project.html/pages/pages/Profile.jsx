@@ -1,15 +1,20 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-function Profile() {
 
-   
+function Profile() {
+   const redirect = useNavigate(); //use Navigate
 
    // for data showing in website
    useEffect(() => {
+      if (!(localStorage.getItem('userid'))) {
+         return redirect('/');
+
+
+      }
       fetchData();
    }, []);
    const [data_obj, setData] = useState({});
@@ -18,8 +23,8 @@ function Profile() {
       const res = await axios.get(`http://localhost:3000/user/${id}`);
       setData(res.data);
       // ############################################
-      localStorage.setItem('userid',res.data.id)
-      localStorage.setItem('user',res.data.name)
+      localStorage.setItem('userid', res.data.id);
+      localStorage.setItem('user', res.data.name);
 
    };
 
@@ -151,7 +156,7 @@ function Profile() {
                      <div className="card mb-4 py-3">
                         <div className="card-body text-center">
                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar" className="rounded-circle img-fluid" style={{ width: 150 }} />
-                           <h3 className="my-3">{data_obj.name}</h3>
+                           <h2 className="my-3">{data_obj.name}</h2>
                            <div className="d-flex justify-content-center mb-1 mt-5">
                               <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" onClick={() => edithandle(data_obj.id)}>Edit Profile</button>
                            </div>
@@ -162,39 +167,39 @@ function Profile() {
                   <div className="col-lg-8">
                      <div className="card mb-4 py-4 pl-3">
                         <div className="card-body">
-                           <div className="row">
+                           <div className="row d-flex align-items-center">
                               <div className="col-sm-3 py-1">
-                                 <p className="mb-0">ID</p>
+                                 <h5 className="mb-1">ID</h5>
                               </div>
                               <div className="col-sm-9">
-                                 <p className="text-muted mb-0">{data_obj.id}</p>
+                                 <h5 className="text-muted mb-0">{data_obj.id}</h5>
                               </div>
                            </div>
                            <hr />
                            <div className="row">
                               <div className="col-sm-3 py-1">
-                                 <p className="mb-0">Name</p>
+                                 <h5 className="mb-1">Name</h5>
                               </div>
                               <div className="col-sm-9">
-                                 <p className="text-muted mb-0">{data_obj.name}</p>
+                                 <h5 className="text-muted mb-0">{data_obj.name}</h5>
                               </div>
                            </div>
                            <hr />
                            <div className="row">
                               <div className="col-sm-3 py-1">
-                                 <p className="mb-0">Mobile</p>
+                                 <h5 className="mb-1">Mobile</h5>
                               </div>
                               <div className="col-sm-9">
-                                 <p className="text-muted mb-0">{data_obj.mobile}</p>
+                                 <h5 className="text-muted mb-0">{data_obj.mobile}</h5>
                               </div>
                            </div>
                            <hr />
                            <div className="row">
                               <div className="col-sm-3 py-1">
-                                 <p className="mb-0">Email</p>
+                                 <h5 className="mb-1">Email</h5>
                               </div>
                               <div className="col-sm-9">
-                                 <p className="text-muted mb-0">{data_obj.email}</p>
+                                 <h5 className="text-muted mb-0">{data_obj.email}</h5>
                               </div>
                            </div>
 

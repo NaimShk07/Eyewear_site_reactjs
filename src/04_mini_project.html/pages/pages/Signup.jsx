@@ -1,11 +1,23 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
 function Signup() {
+   const redirect = useNavigate(); //use Navigate
+
+
+   useEffect(() => {
+      if (localStorage.getItem('userid')) {
+         // return false
+         redirect('/');
+         // return false;
+
+      }
+   }, []);
+
    const [formvalue, setFormvalue] = useState({ //use state variable
       name: "",
       email: "",

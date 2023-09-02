@@ -1,9 +1,9 @@
 {
   "user": [
     {
-      "name": "workinglast222",
-      "email": "workinglast@gmail.com",
-      "password": "workinglast",
+      "name": "workingtest",
+      "email": "working@gmail.com",
+      "password": "working",
       "mobile": 1234567890,
       "id": "1692356520984"
     },
@@ -135,19 +135,16 @@
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "Men eyewear",
-      "action": "delete edit"
+      "id": "1693586069197",
+      "name": "Mens eyewear"
     },
     {
-      "id": 2,
-      "name": "Womes eyewear",
-      "action": "delete edit"
+      "id": "1693586077308",
+      "name": "Womens eyewear"
     },
     {
-      "id": 3,
-      "name": "Kid eyewear",
-      "action": "delete edit"
+      "id": "1693586085346",
+      "name": "Kidsss eyewear"
     }
   ]
 }

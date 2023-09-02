@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useEffect } from 'react';
 
 
 
@@ -11,6 +12,15 @@ import { toast } from 'react-toastify';
 
 function Login() {
    const redirect = useNavigate(); //use Navigate
+
+   useEffect(() => {
+      if (localStorage.getItem('userid')) {
+         return redirect('/');
+         
+
+      }
+   }, []);
+
 
    const [formvalue, setFormvalue] = useState({
       id: "",

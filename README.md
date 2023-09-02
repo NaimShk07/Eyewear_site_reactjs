@@ -10,6 +10,8 @@ Currently, two official plugins are available:
 ### Axios
 
 - axios.get(url) // will give all the data from url
-- axios.get(url/id) // give this specific object according to id
+- axios.get(url/id) // will give specific object according to id
 - axios.patch(url/id,obj) // change this id object with the given object
 - axios.delete(url/id) // delete this specific id object
+- axios.get(url?email=${data}) // give this specific data according to email, if it is in api/database
+- axios.post(url, formvalue); //to send data in api/database
