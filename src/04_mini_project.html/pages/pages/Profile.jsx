@@ -10,7 +10,7 @@ function Profile() {
 
    // for data showing in website
    useEffect(() => {
-      if (!(localStorage.getItem('userid'))) {
+      if (!(localStorage.getItem('user'))) {
          return redirect('/');
 
 

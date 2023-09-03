@@ -14,6 +14,7 @@ import Blog from "./04_mini_project.html/pages/pages/Blog";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Profile from "./04_mini_project.html/pages/pages/Profile";
+import View_product from "./04_mini_project.html/pages/pages/View_product";
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
           <Route path="/about" element={<> <Headerrr /><About /> <Footer />  </>}></Route>
           <Route path="/blog" element={<><Headerrr /> <Blog /> <Footer />  </>}></Route>
           <Route path="/profile" element={<> <Headerrr /><Profile /> <Footer />  </>}></Route>
+
+          <Route path="/view_prod/:id" element={<> <Headerrr /><View_product /> <Footer />  </>}></Route>
+
 
         </Routes>
       </BrowserRouter>

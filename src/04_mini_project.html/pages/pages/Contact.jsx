@@ -13,8 +13,8 @@ function Contact() {
    });
 
    const onChangeHandle = (e) => {
-      setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
-      // setFormvalue({ ...formvalue,id:new Date().getTime().toString(), [e.target.name]: e.target.value });
+      // setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
+      setFormvalue({ ...formvalue,id:new Date().getTime().toString(), [e.target.name]: e.target.value });
 
       console.log(formvalue);
    };
