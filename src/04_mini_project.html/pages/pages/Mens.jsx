@@ -5,11 +5,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 function Mens() {
    const redirect = useNavigate();
-   const clickhandler = (e) => {
-      console.log('working');
-      console.log(e.target);
 
-   };
    useEffect(() => {
       fetchData();
 
