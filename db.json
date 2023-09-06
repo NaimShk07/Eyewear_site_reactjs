@@ -3,7 +3,7 @@
     {
       "name": "working",
       "email": "working@gmail.com",
-      "password": "working",
+      "password": "1233",
       "mobile": 1234567890,
       "id": "1692356520984"
     },
@@ -97,7 +97,7 @@
     {
       "id": 1,
       "name": "Black Hexagonal",
-      "price": "$120.00",
+      "price": "$200.00",
       "img_link": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/628x301/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e11675-c1-eyeglasses_g_1122_2.jpg",
       "des": "Stylish black hexagonal eyeglasses for a trendy look.",
       "prod_cat": "Mens eyewear"
@@ -322,6 +322,10 @@
     {
       "id": "1693586085346",
       "name": "Kids eyewear"
+    },
+    {
+      "id": "1693916102178",
+      "name": "other"
     }
   ]
 }

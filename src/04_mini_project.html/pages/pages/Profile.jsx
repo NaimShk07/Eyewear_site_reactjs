@@ -18,15 +18,17 @@ function Profile() {
       fetchData();
    }, []);
    const [data_obj, setData] = useState({});
+
    const fetchData = async () => {
       const id = localStorage.getItem('userid');
       const res = await axios.get(`http://localhost:3000/user/${id}`);
       setData(res.data);
       // ############################################
-      localStorage.setItem('userid', res.data.id);
-      localStorage.setItem('user', res.data.name);
+      // localStorage.setItem('userid', res.data.id);
+      // localStorage.setItem('user', res.data.name);
 
    };
+
 
    const [formvalue, setFormvalue] = useState({ //use state variable
       id: "",
@@ -42,6 +44,7 @@ function Profile() {
    };
 
    const [dataId, set_dataId] = useState(); //to store the id of data we get on clicking edit btn
+
    const edithandle = async (id) => {// we are using this because ,by clicking this it will reset and get data from server again
       const res = await axios.get(`http://localhost:3000/user/${id}`);
       setFormvalue(res.data);
@@ -50,20 +53,7 @@ function Profile() {
 
    };
 
-   const onsubmit = async (e) => {
-      e.preventDefault();
-      if (validation()) {
-         const res = await axios.patch(`http://localhost:3000/user/${dataId}`, formvalue);
-         console.log(res);
-         if (res.status == 200) {
-            setFormvalue({ ...formvalue, name: "", email: "", password: "", mobile: "" });
-            toast.success("Edit Success");
 
-            fetchData();
-         }
-
-      }
-   };
 
    let validation = () => { //checking every field
       var result = true;
@@ -90,6 +80,23 @@ function Profile() {
          return false;
       }
       return result;
+   };
+
+   const onsubmit = async (e) => {
+      e.preventDefault();
+      if (validation()) {
+         const res = await axios.patch(`http://localhost:3000/user/${dataId}`, formvalue);
+         // console.log(res);
+         if (res.status == 200) {
+            localStorage.setItem('user', formvalue.name);
+            setFormvalue({ ...formvalue, name: "", email: "", password: "", mobile: "" });
+            toast.success("Edit Success");
+
+            fetchData();
+            return redirect('/profile');
+         }
+
+      }
    };
 
 
@@ -159,6 +166,7 @@ function Profile() {
                            <h2 className="my-3">{data_obj.name}</h2>
                            <div className="d-flex justify-content-center mb-1 mt-5">
                               <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" onClick={() => edithandle(data_obj.id)}>Edit Profile</button>
+                              
                            </div>
                         </div>
                      </div>
