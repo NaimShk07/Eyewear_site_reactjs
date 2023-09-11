@@ -21,6 +21,8 @@ function Womens() {
     <div>
       {/* ***** Main Banner Area Start ***** */}
       <div className="page-heading ph-women" id="top" >
+            {/* for background image put on ph women */}
+
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

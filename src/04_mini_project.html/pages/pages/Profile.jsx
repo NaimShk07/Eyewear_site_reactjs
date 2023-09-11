@@ -35,11 +35,19 @@ function Profile() {
       name: "",
       email: "",
       password: "",
-      mobile: ""
+      mobile: "",
+      updated: ""
    });
 
    const onChangeHandle = (e) => { // get the written data
-      setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
+      const date = new Date().toUTCString().split("GMT")[0].slice(4, 16).trim();
+      const time = new Date().toLocaleTimeString();
+
+      setFormvalue({
+         ...formvalue,
+         [e.target.name]: e.target.value,
+         updated: `${date} ${time}`,
+      });
       // console.log(formvalue);
    };
 
@@ -166,7 +174,7 @@ function Profile() {
                            <h2 className="my-3">{data_obj.name}</h2>
                            <div className="d-flex justify-content-center mb-1 mt-5">
                               <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" onClick={() => edithandle(data_obj.id)}>Edit Profile</button>
-                              
+
                            </div>
                         </div>
                      </div>

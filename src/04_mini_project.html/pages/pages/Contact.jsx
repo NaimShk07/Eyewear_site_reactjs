@@ -2,29 +2,43 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { toast } from "react-toastify";
+
 
 
 function Contact() {
 
    const [formvalue, setFormvalue] = useState({
+      id: "",
       name: "",
       email: "",
-      message: ""
+      message: "",
+      created: "",
+      updated: "Not yet",
    });
 
    const onChangeHandle = (e) => {
-      // setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
-      setFormvalue({ ...formvalue,id:new Date().getTime().toString(), [e.target.name]: e.target.value });
+      const date = new Date().toUTCString().split("GMT")[0].slice(4, 16).trim();
+      const time = new Date().toLocaleTimeString();
 
-      console.log(formvalue);
+      setFormvalue({
+         ...formvalue,
+         id: new Date().getTime().toString(),
+         [e.target.name]: e.target.value,
+         created: `${date} ${time}`,
+      });
+
+      // console.log(formvalue);
    };
 
    const onsubmit = async (e) => {
       e.preventDefault();
       const res = await axios.post("http://localhost:3000/contact", formvalue);
       if (res.status == 201) {
-         setFormvalue({ ...formvalue, name: "", email: "", password: "" });
-         alert("Insert Success");
+         setFormvalue({ ...formvalue, name: "", email: "", message: "" });
+         // alert("Insert Success");
+         toast.success("Message sent successfully")
+
          return false;
 
       }
@@ -68,7 +82,7 @@ function Contact() {
                         <div className="row">
                            <div className="col-lg-6">
                               <fieldset>
-                                 <input name="name" onChange={onChangeHandle} value={formvalue.name} type="text" id="name" placeholder="Your name" required />
+                                 <input name="name" onChange={onChangeHandle} value={formvalue.name} type="text" id="name" placeholder="Your name" required color='black' />
                               </fieldset>
                            </div>
                            <div className="col-lg-6">

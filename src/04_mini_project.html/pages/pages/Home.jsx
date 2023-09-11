@@ -38,7 +38,7 @@ function Home() {
                                           <h4>Women</h4>
                                           <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                           <div className="main-border-button">
-                                          <NavLink to="/women">Discover More</NavLink>
+                                             <NavLink to="/women">Discover More</NavLink>
 
                                           </div>
                                        </div>
@@ -59,7 +59,7 @@ function Home() {
                                           <h4>Men</h4>
                                           <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                           <div className="main-border-button">
-                                          <NavLink to="/men">Discover More</NavLink>
+                                             <NavLink to="/men">Discover More</NavLink>
 
                                           </div>
                                        </div>
@@ -93,15 +93,16 @@ function Home() {
                               <div className="right-first-image">
                                  <div className="thumb">
                                     <div className="inner-content">
-                                       <h4>Accessories</h4>
-                                       <span>Best Eyewear Accessories</span>
+                                       <h4>All products</h4>
+                                       <span>Best Eyewear For Everyone</span>
                                     </div>
                                     <div className="hover-content">
                                        <div className="inner">
                                           <h4>Accessories</h4>
                                           <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                           <div className="main-border-button">
-                                             <a href="#">Discover More</a>
+                                             <NavLink to="/allprod">Discover More</NavLink>
+
                                           </div>
                                        </div>
                                     </div>

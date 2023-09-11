@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 
-function Mens() {
+function Allprod() {
    const redirect = useNavigate();
 
    useEffect(() => {
@@ -14,7 +14,7 @@ function Mens() {
    const [data, setdata] = useState([]);
 
    const fetchData = async () => {
-      const { data } = await axios.get(`http://localhost:3000/product/?prod_cat=${"Mens eyewear"}`);
+      const { data } = await axios.get(`http://localhost:3000/product`);
       setdata(data);
    };
    return (
@@ -22,16 +22,16 @@ function Mens() {
          {/* ***** Main Banner Area Start ***** */}
          <div className="page-heading" id="top">
             {/* for background image put on page heading */}
-            <div className="container">
+            {/* <div className="container">
                <div className="row">
                   <div className="col-lg-12">
                      <div className="inner-content">
-                        <h2>Check Men's Products</h2>
+                        <h2>Check All Products</h2>
                         <span>Awesome &amp; Stylish eyewears by Hexashop</span>
                      </div>
                   </div>
                </div>
-            </div>
+            </div> */}
          </div>
          {/* ***** Main Banner Area End ***** */}
          {/* ***** Products Area Starts ***** */}
@@ -40,7 +40,7 @@ function Mens() {
                <div className="row">
                   <div className="col-lg-12">
                      <div className="section-heading">
-                        <h2>Our Latest Products</h2>
+                        <h2>Check Our All Products</h2>
                         <span>Check out all of our products.</span>
                      </div>
                   </div>
@@ -53,7 +53,7 @@ function Mens() {
                      data.map((value, index) => (
                         <div key={index} className="col-lg-4" >
                            <div className="item" onClick={(e) => redirect(`/view_prod/${value.id}`)} >
-                              <div className="thumb" >
+                              <div className="thumb">
                                  <div className="hover-content">
                                     <ul>
                                        <li><a href="javascript:void(0)"><i className="fa fa-eye" /></a></li>
@@ -88,4 +88,4 @@ function Mens() {
    );
 }
 
-export default Mens;
+export default Allprod;

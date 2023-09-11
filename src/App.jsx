@@ -15,6 +15,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Profile from "./04_mini_project.html/pages/pages/Profile";
 import View_product from "./04_mini_project.html/pages/pages/View_product";
+import Allprod from "./04_mini_project.html/pages/pages/Allprod";
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
 
       {/* Project */}
       <BrowserRouter>
+        <Headerrr />
         <ToastContainer />
+
 
         <Routes>
           <Route path="/" element={<><Headerrr /> <Home /> <Footer />  </>}></Route>
@@ -34,12 +37,13 @@ function App() {
           <Route path="/men" element={<><Headerrr /> <Mens /> <Footer />  </>}></Route>
           <Route path="/women" element={<> <Headerrr /><Womens /> <Footer />  </>}></Route>
           <Route path="/kid" element={<><Headerrr /> <Kids /> <Footer />  </>}></Route>
+          <Route path="/allprod" element={<><Headerrr /> <Allprod /> <Footer />  </>}></Route>
           <Route path="/contact" element={<> <Headerrr /> <Contact /> <Footer />  </>}></Route>
           <Route path="/about" element={<> <Headerrr /><About /> <Footer />  </>}></Route>
           <Route path="/blog" element={<><Headerrr /> <Blog /> <Footer />  </>}></Route>
           <Route path="/profile" element={<> <Headerrr /><Profile /> <Footer />  </>}></Route>
 
-          <Route path="/view_prod/:id" element={<> <Headerrr /><View_product />   </>}></Route>
+          <Route path="/view_prod/:id" element={<> <View_product />   </>}></Route>
 
 
         </Routes>
